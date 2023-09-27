@@ -4,19 +4,19 @@ import { styled } from "styled-components";
 function NavLinks({ className }) {
   return (
     <StyledNavLinks className={className}>
-      <li className="p__opensans text-base">
+      <li>
         <a href="#home">Home</a>
       </li>
-      <li className="p__opensans">
+      <li>
         <a href="#about">About</a>
       </li>
-      <li className="p__opensans">
+      <li>
         <a href="#menu">Menu</a>
       </li>
-      <li className="p__opensans">
+      <li>
         <a href="#awards">Awards</a>
       </li>
-      <li className="p__opensans">
+      <li>
         <a href="#contact">Contact</a>
       </li>
     </StyledNavLinks>

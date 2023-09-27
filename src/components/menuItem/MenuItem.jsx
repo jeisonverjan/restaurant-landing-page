@@ -1,9 +1,5 @@
 function MenuItem() {
-    return (
-        <div>
-            MenuItem
-        </div>
-    )
+  return <div>MenuItem</div>;
 }
 
-export default MenuItem
+export default MenuItem;

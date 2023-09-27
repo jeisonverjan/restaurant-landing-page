@@ -1,21 +1,25 @@
+import { useState } from "react";
 import { styled } from "styled-components";
-import NavLinks from "./NavLinks";
-import Logo from "../logo/Logo";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
-import { useState } from "react";
+
+import NavLinks from "./NavLinks";
+import Logo from "../logo/Logo";
+import Registration from "./Registration";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <StyledNavbar className="flex-between">
       <Logo className="logo" />
+      <NavLinks className="desktop-links" />
+      <Registration />
       <GiHamburgerMenu
         className="hamburger-icon"
         onClick={() => setIsMenuOpen(true)}
       />
       {isMenuOpen && (
-        <div className="mobile-links">
+        <div className="mobile-links slide-bottom">
           <MdOutlineRestaurantMenu
             className="overlay-close"
             onClick={() => setIsMenuOpen(false)}
@@ -23,13 +27,12 @@ function Navbar() {
           <NavLinks className="mobile-links-list" />
         </div>
       )}
-      <NavLinks className="desktop-links" />
     </StyledNavbar>
   );
 }
 
 const StyledNavbar = styled.div`
-  background-color: var(--color-black);
+  background: var(--color-black);
   padding: 1rem;
 
   .logo {
@@ -47,13 +50,6 @@ const StyledNavbar = styled.div`
   .hamburger-icon {
     color: var(--color-white);
   }
-  .overlay-close {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    font-size: 2rem;
-    color: var(--color-golden);
-  }
 
   .mobile-links {
     background-color: var(--color-black);
@@ -62,15 +58,77 @@ const StyledNavbar = styled.div`
     right: 0;
     left: 0;
     bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .overlay-close {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      font-size: 2rem;
+      color: var(--color-golden);
+    }
 
     .mobile-links-list {
       color: var(--color-golden);
       font-family: var(--font-base);
+      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+
+      li:hover {
+        color: white;
+      }
     }
   }
 
   .desktop-links {
     display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    .logo {
+      font-size: 2rem;
+    }
+
+    svg {
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 1rem 2rem;
+    .hamburger-icon {
+      display: none;
+    }
+
+    .mobile-links {
+      display: none;
+    }
+
+    .desktop-links {
+      display: flex;
+      gap: 2rem;
+
+      a {
+        color: var(--color-white);
+        font-family: var(--font-alt);
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        text-transform: capitalize;
+        line-height: 28px;
+        font-size: 16px;
+
+        &:hover {
+          color: var(--color-grey);
+        }
+      }
+    }
   }
 `;
 
