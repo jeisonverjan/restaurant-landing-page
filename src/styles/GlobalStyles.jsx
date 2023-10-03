@@ -36,6 +36,12 @@ a {
     align-items: center;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .text-base {
     /* Body 16px Regular */
     font-family: var(--font-alt);
