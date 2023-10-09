@@ -3,9 +3,7 @@ import { styled } from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
 
-import NavLinks from "./NavLinks";
-import Logo from "../logo/Logo";
-import Registration from "./Registration";
+import { NavLinks, Logo, Registration } from "../../components";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,6 +28,8 @@ function Navbar() {
     </StyledNavbar>
   );
 }
+
+export default Navbar;
 
 const StyledNavbar = styled.div`
   background: var(--color-black);
@@ -131,5 +131,3 @@ const StyledNavbar = styled.div`
     }
   }
 `;
-
-export default Navbar;

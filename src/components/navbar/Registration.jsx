@@ -3,7 +3,7 @@ import styled from "styled-components";
 function Registration() {
   return (
     <StyledRegistration>
-      <a className="text-base" href="#">
+      <a className="text-base" href="#newsletter">
         Log In / Registration
       </a>
       <div />

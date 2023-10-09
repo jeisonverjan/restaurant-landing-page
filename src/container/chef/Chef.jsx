@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { images } from "../../constants";
-import SubHeading from "../../components/subHeading/SubHeading";
-import Heading from "../../components/heading/Heading";
-import Paragraph from "../../components/paragraph/Paragraph";
+import { SubHeading, Heading, Paragraph } from "../../components";
 
 function Chef() {
   return (

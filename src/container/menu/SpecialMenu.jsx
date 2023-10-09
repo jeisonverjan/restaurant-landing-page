@@ -1,14 +1,10 @@
 import styled from "styled-components";
 import { data, images } from "../../constants";
-
-import SubHeading from "../../components/subHeading/SubHeading";
-import Heading from "../../components/heading/Heading";
-import MenuItem from "../../components/menuItem/MenuItem";
-import Button from "../../components/button/Button";
+import { SubHeading, Heading, MenuItem, Button } from "../../components";
 
 function SpecialMenu() {
   return (
-    <StyledSpecialMenu className="section__padding flex-center">
+    <StyledSpecialMenu className="section__padding flex-center" id="menu">
       <div className="title">
         <SubHeading title="Menu That Fits Your Palate" />
         <Heading type="primary">Today&apos;s Special</Heading>

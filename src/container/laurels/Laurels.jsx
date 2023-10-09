@@ -1,12 +1,10 @@
 import styled from "styled-components";
 import { data, images } from "../../constants";
-import SubHeading from "../../components/subHeading/SubHeading";
-import Heading from "../../components/heading/Heading";
-import AwardItem from "../../components/awardItem/AwardItem";
+import { SubHeading, Heading, AwardItem } from "../../components";
 
 function Laurels() {
   return (
-    <StyledLaurels className="section__padding flex-center">
+    <StyledLaurels className="section__padding flex-center" id="awards">
       <div className="logo flex-center">
         <img src={images.logo} alt="restaurant logo" />
       </div>

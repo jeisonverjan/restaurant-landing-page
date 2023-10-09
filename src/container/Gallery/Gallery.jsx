@@ -1,12 +1,14 @@
+import { useRef } from "react";
 import styled from "styled-components";
 import { images } from "../../constants";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
-import Subheading from "../../components/subHeading/SubHeading";
-import Heading from "../../components/heading/Heading";
-import Paragraph from "../../components/paragraph/Paragraph";
-import Button from "../../components/button/Button";
-import GalleryCard from "../../components/galleryCard/GalleryCard";
-import { useRef } from "react";
+import {
+  SubHeading,
+  Heading,
+  Paragraph,
+  Button,
+  GalleryCard,
+} from "../../components";
 
 const gallery = [
   images.gallery01,
@@ -30,7 +32,7 @@ function Gallery() {
     <StyledGallery className="flex-center">
       <div className="gallery-content">
         <div className="gallery-content-title">
-          <Subheading title="Instagram" />
+          <SubHeading title="Instagram" />
           <Heading>Photo Gallery</Heading>
         </div>
         <Paragraph>

@@ -1,13 +1,10 @@
 import styled from "styled-components";
 import { images } from "../../constants";
-
-import Heading from "../../components/heading/Heading";
-import Paragraph from "../../components/paragraph/Paragraph";
-import Button from "../../components/button/Button";
+import { Heading, Paragraph, Button } from "../../components";
 
 function AboutUs() {
   return (
-    <StyledAboutUs className="section__padding flex-center">
+    <StyledAboutUs className="section__padding flex-center" id="about">
       <div className="overlay flex-center">
         <img src={images.G} alt="G_overlay" />
       </div>

@@ -4,7 +4,7 @@ import { images } from "../../constants";
 
 function Header() {
   return (
-    <StyledHeader className="section__padding">
+    <StyledHeader className="section__padding" id="home">
       <div className="content">
         <SubHeading title="Chase the new Flavour" />
         <Heading type="primary">The Key To Fine Dining</Heading>

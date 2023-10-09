@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import Heading from "../heading/Heading";
-import Paragraph from "../paragraph/Paragraph";
+import { Heading, Paragraph } from "../../components";
 
 // eslint-disable-next-line react/prop-types
 function AwardItem({ image, title, text }) {
